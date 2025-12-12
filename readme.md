@@ -48,7 +48,7 @@
 ### Method 2: Manual Installation
 ```bash
 # Clone the repository
-git clone https://github.com/yourusername/decky-bluetooth-controller.git
+git clone https://github.com/hajtidev/decky-bluetooth-controller.git
 
 # Install on Steam Deck
 cd decky-bluetooth-controller
@@ -103,14 +103,14 @@ graph LR
 ```
 
 ### Controller Specifications
-| Feature | Support | Notes |
-|---------|---------|-------|
-| **Buttons** | 10 buttons + Start/Select | A, B, X, Y, LB, RB, L3, R3, Start, Select |
-| **Analog Sticks** | 2 full-range | 8-bit precision, configurable deadzone |
-| **Triggers** | 2 analog | 8-bit precision, pressure-sensitive |
-| **D-Pad** | 8-way digital | Proper diagonal detection |
-| **Connection** | Bluetooth Classic (HID) | Low latency, up to 10m range |
-| **Battery Impact** | Low-Medium | ~10-15% per hour |
+| Feature            | Support                   | Notes                                     |
+| ------------------ | ------------------------- | ----------------------------------------- |
+| **Buttons**        | 10 buttons + Start/Select | A, B, X, Y, LB, RB, L3, R3, Start, Select |
+| **Analog Sticks**  | 2 full-range              | 8-bit precision, configurable deadzone    |
+| **Triggers**       | 2 analog                  | 8-bit precision, pressure-sensitive       |
+| **D-Pad**          | 8-way digital             | Proper diagonal detection                 |
+| **Connection**     | Bluetooth Classic (HID)   | Low latency, up to 10m range              |
+| **Battery Impact** | Low-Medium                | ~10-15% per hour                          |
 
 ## ⚙️ Advanced Features
 
@@ -130,13 +130,13 @@ View estimated battery life and connection strength in the status panel.
 
 ### Common Issues & Solutions
 
-| Issue | Solution |
-|-------|----------|
-| **PC can't see Steam Deck** | 1. Make sure controller mode is enabled<br>2. Click "Make Discoverable"<br>3. Ensure PC Bluetooth is on |
-| **Connection drops** | 1. Stay within 10m range<br>2. Avoid other 2.4GHz interference<br>3. Restart both devices if persistent |
-| **Input lag** | 1. Ensure line of sight<br>2. Close other Bluetooth devices<br>3. Try on different USB ports (for dongles) |
-| **Wrong button mapping** | 1. Check controller profile in Settings<br>2. Restart game after changing profile |
-| **Steam Deck controls not working** | 1. Disable controller mode<br>2. Wait for Steam input to restart automatically |
+| Issue                               | Solution                                                                                                   |
+| ----------------------------------- | ---------------------------------------------------------------------------------------------------------- |
+| **PC can't see Steam Deck**         | 1. Make sure controller mode is enabled<br>2. Click "Make Discoverable"<br>3. Ensure PC Bluetooth is on    |
+| **Connection drops**                | 1. Stay within 10m range<br>2. Avoid other 2.4GHz interference<br>3. Restart both devices if persistent    |
+| **Input lag**                       | 1. Ensure line of sight<br>2. Close other Bluetooth devices<br>3. Try on different USB ports (for dongles) |
+| **Wrong button mapping**            | 1. Check controller profile in Settings<br>2. Restart game after changing profile                          |
+| **Steam Deck controls not working** | 1. Disable controller mode<br>2. Wait for Steam input to restart automatically                             |
 
 ### Manual Reset
 If something goes wrong:
@@ -172,7 +172,7 @@ We welcome contributions! Here's how:
 ### Development Setup
 ```bash
 # Clone and setup
-git clone https://github.com/yourusername/decky-bluetooth-controller.git
+git clone https://github.com/hajtidev/decky-bluetooth-controller.git
 cd decky-bluetooth-controller
 npm install
 pip install -r requirements.txt
@@ -215,9 +215,9 @@ scp -r dist/* deck@steamdeck:~/homebrew/plugins/decky-bluetooth-controller/
 
 ## 🆘 Support
 
-- **Issues:** [GitHub Issues](https://github.com/yourusername/decky-bluetooth-controller/issues)
+- **Issues:** [GitHub Issues](https://github.com/hajtidev/decky-bluetooth-controller/issues)
 - **Discord:** Join our [community server](https://discord.gg/yourinvite)
-- **Wiki:** Check the [project wiki](https://github.com/yourusername/decky-bluetooth-controller/wiki) for detailed guides
+- **Wiki:** Check the [project wiki](https://github.com/hajtidev/decky-bluetooth-controller/wiki) for detailed guides
 
 ## 📜 License
 
@@ -232,7 +232,7 @@ This project is licensed under the MIT License - see the [LICENSE](LICENSE) file
 
 ## 🌟 Star History
 
-[![Star History Chart](https://api.star-history.com/svg?repos=yourusername/decky-bluetooth-controller&type=Date)](https://star-history.com/#yourusername/decky-bluetooth-controller&Date)
+[![Star History Chart](https://api.star-history.com/svg?repos=hajtidev/decky-bluetooth-controller&type=Date)](https://star-history.com/#hajtidev/decky-bluetooth-controller&Date)
 
 ---
 
@@ -242,8 +242,8 @@ This project is licensed under the MIT License - see the [LICENSE](LICENSE) file
 
 **Enjoy wireless gaming freedom!**
 
-[![Buy me a coffee](https://img.shields.io/badge/Buy_Me_A_Coffee-FFDD00?style=for-the-badge&logo=buy-me-a-coffee&logoColor=black)](https://buymeacoffee.com/yourusername)
-[![GitHub Sponsors](https://img.shields.io/badge/Sponsor%20Me-EA4AAA?style=for-the-badge&logo=githubsponsors&logoColor=white)](https://github.com/sponsors/yourusername)
+[![Buy me a coffee](https://img.shields.io/badge/Buy_Me_A_Coffee-FFDD00?style=for-the-badge&logo=buy-me-a-coffee&logoColor=black)](https://buymeacoffee.com/hajtidev)
+[![GitHub Sponsors](https://img.shields.io/badge/Sponsor%20Me-EA4AAA?style=for-the-badge&logo=githubsponsors&logoColor=white)](https://github.com/sponsors/hajtidev)
 
 </div>
 
@@ -251,15 +251,15 @@ This project is licensed under the MIT License - see the [LICENSE](LICENSE) file
 
 ## 🎮 Game Compatibility List
 
-| Game/Platform | Status | Notes |
-|--------------|--------|-------|
-| **Steam Games** | ✅ Excellent | Native Xbox controller support |
-| **Epic Games** | ✅ Excellent | Works perfectly |
-| **Xbox Game Pass** | ✅ Excellent | Full compatibility |
-| **Emulators** | ✅ Excellent | RetroArch, Dolphin, etc. |
-| **Battle.net** | ✅ Great | Modern Warfare, Diablo IV |
-| **EA App** | ✅ Good | Some games may need button mapping |
-| **GOG Galaxy** | ✅ Good | Most games work well |
+| Game/Platform      | Status      | Notes                              |
+| ------------------ | ----------- | ---------------------------------- |
+| **Steam Games**    | ✅ Excellent | Native Xbox controller support     |
+| **Epic Games**     | ✅ Excellent | Works perfectly                    |
+| **Xbox Game Pass** | ✅ Excellent | Full compatibility                 |
+| **Emulators**      | ✅ Excellent | RetroArch, Dolphin, etc.           |
+| **Battle.net**     | ✅ Great     | Modern Warfare, Diablo IV          |
+| **EA App**         | ✅ Good      | Some games may need button mapping |
+| **GOG Galaxy**     | ✅ Good      | Most games work well               |
 
 **Last tested:** December 2023  
 **SteamOS Version:** 3.5+  
