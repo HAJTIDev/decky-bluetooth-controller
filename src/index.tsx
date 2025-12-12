@@ -1,6 +1,6 @@
 import { definePlugin } from "decky-frontend-lib";
 import { FaGamepad } from "react-icons/fa";
-import Main from "./main";
+import Main from "../frontend/main";
 
 export default definePlugin(() => {
   return {
