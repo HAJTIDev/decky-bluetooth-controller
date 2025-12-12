@@ -8,13 +8,10 @@ import {
   ProgressBarWithInfo,
   showModal,
   ModalRoot,
-  Navigation,
-  SidebarNavigation,
-  SidebarNavigationPage,
-  Focusable,
-  staticClasses
+  SidebarNavigation
 } from "decky-frontend-lib";
-import { FaGamepad, FaBluetooth, FaCog, FaQuestionCircle } from "react-icons/fa";
+import React from "react";
+// Icons removed
 
 // Import styles
 import "./style.css";
@@ -79,9 +76,6 @@ const Main = () => {
           showSuccessModal("Controller mode active!", "Go to PC Bluetooth settings and pair with 'Steam Deck Controller'");
         }
       }
-    } catch (error) {
-      console.error("Error toggling controller:", error);
-      showErrorModal("Error", error.message || "Failed to toggle controller mode");
     } finally {
       setLoading(false);
       loadStatus();
@@ -95,7 +89,7 @@ const Main = () => {
       if (result.success) {
         setIsDiscoverable(true);
         showSuccessModal("Discoverable Mode", "Steam Deck is now discoverable for 60 seconds.\n\nOn your PC:\n1. Open Bluetooth Settings\n2. Add new device\n3. Look for 'Steam Deck Controller'\n4. Pair (no PIN required)");
-        
+
         // Auto stop discoverable after 60s
         setTimeout(() => {
           setIsDiscoverable(false);
@@ -108,7 +102,7 @@ const Main = () => {
     }
   };
 
-  const showSuccessModal = (title, message) => {
+  const showSuccessModal = (title: string, message: string) => {
     showModal(
       <ModalRoot>
         <div style={{ padding: "20px", textAlign: "center" }}>
@@ -125,7 +119,7 @@ const Main = () => {
     );
   };
 
-  const showErrorModal = (title, message) => {
+  const showErrorModal = (title: string, message: string) => {
     showModal(
       <ModalRoot>
         <div style={{ padding: "20px", textAlign: "center" }}>
@@ -147,17 +141,17 @@ const Main = () => {
       <ModalRoot>
         <div style={{ padding: "20px" }}>
           <h2 style={{ marginBottom: "20px", textAlign: "center" }}>🎮 Quick Start Guide</h2>
-          
+
           <div style={{ marginBottom: "20px" }}>
             <h3>Step 1: Enable Controller</h3>
             <p>Click "Enable Controller Mode" above</p>
           </div>
-          
+
           <div style={{ marginBottom: "20px" }}>
             <h3>Step 2: Make Discoverable</h3>
             <p>Click "Make Discoverable for Pairing"</p>
           </div>
-          
+
           <div style={{ marginBottom: "20px" }}>
             <h3>Step 3: On Your PC</h3>
             <ol style={{ paddingLeft: "20px" }}>
@@ -167,12 +161,12 @@ const Main = () => {
               <li>Pair (no PIN or use 0000)</li>
             </ol>
           </div>
-          
+
           <div style={{ marginBottom: "20px" }}>
             <h3>Step 4: Play!</h3>
             <p>Your PC will see Steam Deck as a gamepad. Launch any game!</p>
           </div>
-          
+
           <div style={{ textAlign: "center", marginTop: "30px" }}>
             <DialogButton onClick={() => window.closeModal()}>Got it!</DialogButton>
           </div>
@@ -200,7 +194,6 @@ const Main = () => {
             disabled={loading}
           >
             <div style={{ display: "flex", alignItems: "center", gap: "10px" }}>
-              <FaGamepad size={24} />
               <span>
                 {controllerActive ? "Disable Controller Mode" : "Enable Controller Mode"}
               </span>
@@ -215,7 +208,6 @@ const Main = () => {
             disabled={loading || !controllerActive}
           >
             <div style={{ display: "flex", alignItems: "center", gap: "10px" }}>
-              <FaBluetooth size={24} />
               <span>
                 {isDiscoverable ? "Currently Discoverable" : "Make Discoverable for Pairing"}
               </span>
@@ -261,7 +253,7 @@ const Main = () => {
           description="Automatically enable controller mode when plugin loads"
         />
       </PanelSectionRow>
-      
+
       <PanelSectionRow>
         <div className="settings-info">
           <p><strong>Device Type:</strong> Xbox 360-compatible gamepad</p>
@@ -286,13 +278,11 @@ const Main = () => {
           {
             title: "Controller",
             content: <MainPage />,
-            icon: <FaGamepad />,
             hideTitle: true
           },
           {
             title: "Settings",
             content: <SettingsPage />,
-            icon: <FaCog />,
             hideTitle: true
           }
         ]}
@@ -302,10 +292,8 @@ const Main = () => {
         <ButtonItem
           layout="below"
           onClick={showQuickStartGuide}
-          style={{ marginTop: "20px" }}
         >
           <div style={{ display: "flex", alignItems: "center", gap: "10px" }}>
-            <FaQuestionCircle />
             <span>Quick Start Guide</span>
           </div>
         </ButtonItem>
@@ -315,7 +303,7 @@ const Main = () => {
 };
 
 // Helper function to call plugin methods
-async function callPluginMethod(method, args) {
+async function callPluginMethod(method: string, args: any): Promise<any> {
   return window.DeckyPluginLoader.callServerMethod(method, args);
 }
 
