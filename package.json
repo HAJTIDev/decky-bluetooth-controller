@@ -2,7 +2,7 @@
   "name": "decky-bluetooth-controller",
   "version": "1.0.0",
   "description": "Use Steam Deck as a Bluetooth controller for PC - Zero configuration required!",
-  "author": "Your Name",
+  "author": "HajtiDev, CloodDev",
   "license": "MIT",
   "scripts": {
     "build": "shx rm -rf dist && rollup -c",
@@ -23,5 +23,8 @@
     "tslib": "^2.3.1",
     "typescript": "^4.4.4"
   },
-  "dependencies": {}
+  "dependencies": {
+    "decky-frontend-lib": "^3.25.0",
+    "react-icons": "^5.5.0"
+  }
 }
